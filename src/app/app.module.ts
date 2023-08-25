@@ -32,11 +32,13 @@ import { FooterComponent } from './modules/footer/footer.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './modules/cart/cart.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
+        
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -60,6 +62,7 @@ import { CartComponent } from './modules/cart/cart.component';
         ShopComponent,
         ProductComponent,
         CartComponent,
+        RegisterComponent,
     ]
 })
 export class AppModule { }

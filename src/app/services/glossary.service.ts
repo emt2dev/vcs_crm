@@ -9,14 +9,30 @@ export class GlossaryService {
 
   public _api: string = "http://localhost:5278/api/";
   public all: string = "all";  
+  public pagingFalse: string = "/nopagination";
+
+  // Content get
+  public landingPageMain = "content/main/current";
+  public landingServices = "content/services";
+  public blogs = "content/blogs";
+
+  // post
+  public updateLandingPage = "content/main/update";
+  public updateLandingServices = "content/services/update";
+  public updateBlogs = "content/blogs/update";
+
+  public newLandingPage = "content/main/new";
+  public newLandingServices = "content/services/new";
+  public newBlogs = "content/blogs/new";
 
   // Cart post
   public addToCart = "cart/add";
   public existingCart = "cart/existing";
   public reduceQuantityFromCart = "cart/reduce";
   public removeFromCart = "cart/remove";
+  public emptyCart = "cart/empty";
 
-  // Category get
+  // Category post
   public newStyle = "category/new/style";
   public newCategory = "category/new/category";
 
@@ -42,6 +58,9 @@ export class GlossaryService {
   public allNonPreOrderable = "product/soon/unavailable";
   public allNew = "product/new/all";
   public allCategory = "product/category/"; // requires category name
+  public allOthers = "product/others/all"
+  public allTraining = "product/training/all";
+  public productDetails = "product/details/";
 
   // Post
   public newProduct = "product/new/item";
@@ -54,8 +73,16 @@ export class GlossaryService {
     return this._api;
   }
 
+  GetProductDetails() {
+    return this._api + this.productDetails;
+  }
+  
   GetCart() {
     return this._api + this.existingCart;
+  }
+
+  EmptyCart() {
+    return this._api + this.emptyCart;
   }
 
   AddItemToCart() {
@@ -130,6 +157,14 @@ export class GlossaryService {
     return this._api + this.allPreOrderable;
   }
 
+  GetOtherProducts() {
+    return this._api + this.allOthers;
+  }
+
+  GetTrainingProducts() {
+    return this._api + this.allTraining;
+  }
+
   GetUnavailable() {
     return this._api + this.allNonPreOrderable;
   }
@@ -148,6 +183,42 @@ export class GlossaryService {
 
   DeleteItem() {
     return this._api + this.deleteProduct;
+  }
+
+  GetMainContent() {
+    return this._api + this.landingPageMain;
+  }
+
+  GetServicesContent() {
+    return this._api + this.landingServices;
+  }
+
+  GetBlogs() {
+    return this._api + this.blogs;
+  }
+
+  UpdateMainContent() {
+    return this._api + this.landingPageMain;
+  }
+
+  UpdateServicesContent() {
+    return this._api + this.landingServices;
+  }
+
+  UpdateBlogs() {
+    return this._api + this.blogs;
+  }
+
+  NewMainContent() {
+    return this._api + this.landingPageMain;
+  }
+
+  NewServicesContent() {
+    return this._api + this.landingServices;
+  }
+
+  NewBlogs() {
+    return this._api + this.blogs;
   }
 
   ErrorHandler(error: HttpErrorResponse) {

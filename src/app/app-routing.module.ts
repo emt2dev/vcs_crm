@@ -6,12 +6,14 @@ const routes: Routes =
   {path: '', loadComponent: () => import('./components/landing/landing.component').then((modulePart) => modulePart.LandingComponent),},
   {path: 'shop', loadComponent: () => import('./components/shop/shop.component').then((modulePart) => modulePart.
   ShopComponent,),},
-  {path: 'product', loadComponent: () => import('./components/product/product.component').then((modulePart) => modulePart.
+  {path: 'product/:productId', loadComponent: () => import('./components/product/product.component').then((modulePart) => modulePart.
   ProductComponent,),},
 
-  
   {path: 'staff', loadComponent: () => import('./components/staff/staff.component').then((modulePart) => modulePart.StaffComponent),},
-  
+  {path: 'user', loadComponent: () => import('./components/user/user.component').then((modulePart) => modulePart.UserComponent),},
+
+  {path: 'register/user', loadComponent: () => import('./components/userlogin/userlogin.component').then((modulePart) => modulePart.UserloginComponent),},
+
   {path: 'login/user', loadComponent: () => import('./components/userlogin/userlogin.component').then((modulePart) => modulePart.UserloginComponent),},
   {path: 'login/staff', loadComponent: () => import('./components/stafflogin/stafflogin.component').then((modulePart) => modulePart.StaffloginComponent),},
 

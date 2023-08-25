@@ -8,7 +8,6 @@ import jwt_decode, { JwtPayload } from 'jwt-decode';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { RefreshTokenDTO } from 'src/app/models/RefreshTokenDTO';
-import { UserDTO } from 'src/app/models/UserDTO';
 import { LoginDTO } from 'src/app/models/LoginDTO';
 
 // EXPORTS
