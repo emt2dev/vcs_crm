@@ -31,6 +31,7 @@ import { NavbarComponent } from './modules/navbar/navbar.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './modules/cart/cart.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { ProductComponent } from './components/product/product.component';
         FooterComponent,
         ShopComponent,
         ProductComponent,
+        CartComponent,
     ]
 })
 export class AppModule { }

@@ -8,8 +8,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClient } from '@angular/common/http';
 
+// Modules/Components
+
 // Dependencies
-import { NavbarComponent } from 'src/app/modules/navbar/navbar.component';
+import { Stripe, loadStripe } from '@stripe/stripe-js';
+
 
 
 @Component({
@@ -23,7 +26,6 @@ import { NavbarComponent } from 'src/app/modules/navbar/navbar.component';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    NavbarComponent,
   ],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
