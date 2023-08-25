@@ -2,17 +2,17 @@
 export class LoginDTO {
     public email: string;
     public password: string;
-    public source: number;
+    public source: string;
 
 
     /*
-    * 0 = register new user
-    * 1 = register new customer
-    * 2 = login user
-    * 3 = login staff
+    * NewUser = register new user
+    * NewStaff = register new staff
+    * LoginUser = login user
+    * LoginStaff = login staff
     */
 
-    constructor(email: string, password: string, source: number)
+    constructor(email: string, password: string, source: string)
     {
         this.email = email;
         this.password = password;

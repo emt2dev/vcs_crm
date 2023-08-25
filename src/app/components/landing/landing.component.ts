@@ -12,23 +12,22 @@ import { HttpClient } from '@angular/common/http';
 
 // Dependencies
 import { Stripe, loadStripe } from '@stripe/stripe-js';
+import { CartComponent } from "../../modules/cart/cart.component";
 
 
 
 @Component({
-  selector: 'app-landing',
-  standalone: true,
-  imports: 
-  [CommonModule, 
-    FormsModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule,
-  ],
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css']
+    selector: 'app-landing',
+    standalone: true,
+    templateUrl: './landing.component.html',
+    styleUrls: ['./landing.component.css'],
+    imports: [CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatFormFieldModule, CartComponent]
 })
 export class LandingComponent implements OnInit {
 

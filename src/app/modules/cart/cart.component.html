@@ -1,1 +1,32 @@
-<p>cart works!</p>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawer">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartDrawer">Total: 21.98</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">Quantity</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Add 1</th>
+                <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">5</th>
+                    <td>Item Name</td>
+                    <td>5.99</td>
+                    <td><button id=1 class="btn btn-warning">+</button></td>
+                    <td><button id=1 class="btn btn-danger">-</button></td>
+                </tr>
+            </table>
+            <button id=1 class="btn btn-outline-secondary">Empty Cart</button>
+            <button id=1 class="btn btn-success">Order as Delivery</button>
+            <button id=1 class="btn btn-info">Order as Pickup</button>
+        </div>
+    </div>
+</div>

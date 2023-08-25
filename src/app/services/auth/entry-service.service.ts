@@ -118,8 +118,8 @@ export class EntryService {
     );
   }
 
-  LoginUser(outgoingDTO: UserDTO) {
-    return this.http.post<UserDTO>(`${this.glossary.LoginUser()}`, outgoingDTO)
+  LoginUser(outgoingDTO: LoginDTO) {
+    return this.http.post<LoginDTO>(`${this.glossary.LoginUser()}`, outgoingDTO)
     .pipe
     (map((res: any) => {
         localStorage.setItem(STOREDTOKEN, res.jwToken);
@@ -149,8 +149,8 @@ export class EntryService {
     );
   }
 
-  LoginStaff(outgoingDTO: UserDTO) {
-    return this.http.post<UserDTO>(`${this.glossary.LoginStaff()}`, outgoingDTO)
+  LoginStaff(outgoingDTO: LoginDTO) {
+    return this.http.post<LoginDTO>(`${this.glossary.LoginStaff()}`, outgoingDTO)
     .pipe
     (map((res: any) => {
         localStorage.setItem(STOREDTOKEN, res.jwToken);
