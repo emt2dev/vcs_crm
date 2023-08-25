@@ -1,0 +1,83 @@
+
+
+.marker__ {
+    font-family: 'Permanent Marker', cursive;
+    margin-left: 2rem;
+
+}
+
+.marker__text {
+    font-family: 'Permanent Marker', cursive;
+    margin-left: 2rem;
+
+}
+
+#marker__ {
+    /* display: inline-block; */
+    z-index: 0;
+
+    background-repeat: no-repeat;
+    /* background-size:  58vh; */
+    background-size: contain;
+    background-position:center center;
+}
+
+.marker__btn {
+    margin: 2rem;
+}
+
+.rotate45deg {
+    transform: rotateX(45deg);
+}
+
+#bulb__ {
+    size: 41rem;
+    position: absolute;
+    left: 41.5%;
+}
+
+#passed__student {
+    z-index: -10;
+}
+
+#passed__cert {
+    z-index: -999;
+}
+
+.hidden {
+	display: none
+}
+.visible {
+	display: block
+}
+.center-text {
+	text-align: center
+}
+form.contact {
+	display: flex;
+	flex-direction: column;
+	max-width: 50rem;
+	width: 50rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+input,
+button {
+	margin-bottom: 10px;
+    height: 2rem;
+}
+button {
+	margin-top: 10px;
+	background-color: transparent;
+	color: black;
+	border: 1px solid black;
+	padding: 4px 16px;
+	transition: 0.4s;
+	width: 100%;
+	margin-top: 10px;
+}
+button:hover:enabled{
+	color: white;
+	background-color: black;
+}

@@ -1,0 +1,71 @@
+<div class="landing">
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:200px" id="mySidebar">
+        <div class="w3-container w3-display-container w3-padding-16">
+          <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+          <h3 class="w3-wide"><img src="../assets/logos/tooth.png" alt="" width="170rem"></h3>
+        </div>
+        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+            <a href="#landing" class="w3-bar-item w3-button">Home</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#training" class="w3-bar-item w3-button">ServSafe Training</a>
+            <a href="/shop" class="w3-bar-item w3-button">Shop Now</a>
+            <a href="#" class="w3-bar-item w3-button">Apps</a>
+        </div>
+        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+            <a href="#" class="w3-bar-item w3-button">Staff Login</a>
+          <a href="/login/user" class="w3-bar-item w3-button">Training Login</a>
+          <a href="/login/user" class="w3-bar-item w3-button">Engineering Login</a>
+          <a href="/login/user" class="w3-bar-item w3-button">Consulting Login</a>
+        </div>
+        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+          <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
+        </div>
+      </nav>
+    
+    <!-- top bar for smaller screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+        <div class="w3-bar-item w3-padding-24 w3-wide">Val's Candy Shelf</div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+      </header>
+      
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+    
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top:83px"></div>
+      
+
+<div class="mb-5 mt-5 container">
+    <form
+      class="form-control"
+    >
+      <h3 class="h3 mb-3 font-weight-normal text-center">Login and start ordering!</h3>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="Email"
+          placeholder="Enter Email Address"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="Password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-block btn-primary">Login</button>
+    </form>
+  </div>
