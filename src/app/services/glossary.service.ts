@@ -1,5 +1,6 @@
 import { HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { PaginationDTO } from '../models/PaginationDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -69,26 +70,24 @@ export class GlossaryService {
 
   constructor() { }
 
-  getApi(){
+  getApi() {
     return this._api;
   }
 
-  GetProductDetails() {
-    return this._api + this.productDetails;
-  }
-  
+  // Cart Controller
   GetCart() {
     return this._api + this.existingCart;
-  }
-
-  EmptyCart() {
-    return this._api + this.emptyCart;
   }
 
   AddItemToCart() {
     return this._api + this.addToCart;
   }
 
+  EmptyCart() {
+    return this._api + this.emptyCart;
+  }
+
+  // Not currently implemented
   ReduceItemFromCart() {
     return this._api + this.reduceQuantityFromCart;
   }
@@ -96,7 +95,9 @@ export class GlossaryService {
   RemoveItemFromCart() {
     return this._api + this.removeFromCart;
   }
+  // End Cart
 
+  // CategoryController (Can Be Deleted)
   AddNewCategory() {
     return this._api + this.newCategory;
   }
@@ -104,7 +105,9 @@ export class GlossaryService {
   AddNewStyle() {
     return this._api + this.newStyle
   }
+  // End CategoryControl
 
+  // Entry Controller, can add Source to userDTO in order to all four routes and can use only one instead. To be implemented.
   RegisterUser() {
     return this._api + this.registerUser;
   }
@@ -124,9 +127,17 @@ export class GlossaryService {
   RefreshSession() {
     return this._api + this.refreshSession;
   }
+  // End Entry Controller
 
+  // lms controller not yet implemented
+  // end lms controller
+  
+  // lead controller not yet implemented
+  // end lead controller
+
+  // Order Controller requires queryparameters
   GetAllOrders() {
-    return this._api + this.allOrders;
+    return `${this._api}${this.allOrders}`;
   }
 
   GetUserOrders() {
@@ -140,51 +151,66 @@ export class GlossaryService {
   SubmitOrder() {
     return this._api + this.submitOrder;
   }
+  // End order controller
+
+  // product controller, handles products, shippingoptions, and style
+  // requires queryparameters
 
   GetAllProducts() {
     return this._api + this.allProduct;
   }
-
+  
+  // Future Implementations
   GetPopular() {
     return this._api + this.allPopular;
   }
 
-  GetNew() {
-    return this._api + this.allNew;
-  }
-
+  // Not in use
   GetPreOrders() {
     return this._api + this.allPreOrderable;
-  }
-
-  GetOtherProducts() {
-    return this._api + this.allOthers;
-  }
-
-  GetTrainingProducts() {
-    return this._api + this.allTraining;
   }
 
   GetUnavailable() {
     return this._api + this.allNonPreOrderable;
   }
 
+  GetOtherProducts() {
+    return this._api + this.allOthers;
+  }
+
+  GetNew() {
+    return this._api + this.allNew;
+  }
+
   GetCategory() {
     return this._api + this.allCategory;
+  }
+  // end not in use
+
+  // To Be Implemented for LMS
+  GetTrainingProducts() {
+    return this._api + this.allTraining;
+  }
+
+  // product details needs to be added when calling this method.
+  GetProductDetails() {
+    return `${this._api}${this.productDetails}`;
   }
 
   SubmitNewItem() {
     return this._api + this.newProduct;
-  }
+  } // this requires FormData to be sent
 
   UpdateItem() {
     return this._api + this.updateProduct;
-  }
+  } // this requires FormData to be sent
 
   DeleteItem() {
-    return this._api + this.deleteProduct;
-  }
+    return `${this._api}${this.deleteProduct}`;
+  } // this requires FormData to be sent
 
+  // Content Controller
+  // Not yet implemented for micro-front end 
   GetMainContent() {
     return this._api + this.landingPageMain;
   }
@@ -220,6 +246,7 @@ export class GlossaryService {
   NewBlogs() {
     return this._api + this.blogs;
   }
+  // end content controller
 
   ErrorHandler(error: HttpErrorResponse) {
     let msg = '';

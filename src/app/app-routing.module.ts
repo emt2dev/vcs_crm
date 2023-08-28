@@ -14,6 +14,8 @@ const routes: Routes =
 
   {path: 'register/user', loadComponent: () => import('./components/userlogin/userlogin.component').then((modulePart) => modulePart.UserloginComponent),},
 
+  {path: 'order/:orderId', loadComponent: () => import('./components/order/order.component').then((modulePart) => modulePart.OrderComponent),},
+
   {path: 'login/user', loadComponent: () => import('./components/userlogin/userlogin.component').then((modulePart) => modulePart.UserloginComponent),},
   {path: 'login/staff', loadComponent: () => import('./components/stafflogin/stafflogin.component').then((modulePart) => modulePart.StaffloginComponent),},
 

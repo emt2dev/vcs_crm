@@ -33,6 +33,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './modules/cart/cart.component';
 import { RegisterComponent } from './components/register/register.component';
+import { OrderComponent } from './components/order/order.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { RegisterComponent } from './components/register/register.component';
         ReactiveFormsModule,
         StaffComponent,
         UserComponent,
+        OrderComponent,
         UserloginComponent,
         StaffloginComponent,
         OrdersuccessComponent,

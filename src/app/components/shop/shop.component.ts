@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -11,6 +12,7 @@ import { ProductService } from 'src/app/services/products/product-service.servic
   standalone: true,
   imports: [
     MatButtonModule,
+    CommonModule,
   ],
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css']

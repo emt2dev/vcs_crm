@@ -1,6 +1,6 @@
 
 
-export class RefreshTokenDTO {
+export class TokensDTO {
 
     public refreshToken: string;
     public jwt: string;

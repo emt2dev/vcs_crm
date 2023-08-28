@@ -1,7 +1,7 @@
-import { StyleDTO } from "./StyleDTO";
-
-
-export class ProductDTO {
+export class NewProductDTO {
+    /**
+     *
+     */
     constructor
     (
         public id: number,
@@ -13,13 +13,19 @@ export class ProductDTO {
         public current_Price: number,
         public sale_Price_Modifier: number,
         public taxCode: string,
-        public styles: Array<StyleDTO>,
+        public styleId: number,
+        public categoryDescription: string,
+        public categoryKindOf: string,
         public categoryName: string,
         public isPopular: Boolean,
         public isComingSoon: Boolean,
         public isAvailableForOrder: Boolean,
         public isNew: Boolean,
-        public imageUrl: string, 
+        public productImage: File, 
+        public styleName: string,
+        public styleDescription: string,
+        public stylePrice_Modifier: number,
+        public styleImageUrls: Array<File>,
     )
     {
         this.id = id;
@@ -31,17 +37,17 @@ export class ProductDTO {
         this.current_Price = current_Price;
         this.sale_Price_Modifier = sale_Price_Modifier;
         this.taxCode = taxCode;
-
-        this.styles = styles;
-
+        this.styleId = styleId;
+        this.categoryDescription = categoryDescription;
+        this.categoryKindOf = categoryKindOf;
         this.categoryName = categoryName;
-
-
         this.isPopular = isPopular;
         this.isComingSoon = isComingSoon;
         this.isAvailableForOrder = isAvailableForOrder;
         this.isNew = isNew;
-
-        this.imageUrl = imageUrl;
+        this.styleName = styleName;
+        this.styleDescription = styleDescription;
+        this.stylePrice_Modifier = stylePrice_Modifier;
+        this.styleImageUrls = styleImageUrls;
     }
 }

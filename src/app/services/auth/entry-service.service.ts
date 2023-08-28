@@ -7,7 +7,7 @@ import { GlossaryService } from '../glossary.service';
 import jwt_decode, { JwtPayload } from 'jwt-decode';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { RefreshTokenDTO } from 'src/app/models/RefreshTokenDTO';
+import { TokensDTO } from 'src/app/models/TokensDTO';
 import { LoginDTO } from 'src/app/models/LoginDTO';
 
 // EXPORTS
@@ -48,7 +48,7 @@ export class EntryService {
     this.glossary = glossary;
 
     if(!localStorage.getItem(SESSIONTOKEN) && localStorage.getItem(STOREDTOKEN)) {
-      let outgoingDTO: any = new RefreshTokenDTO(localStorage.getItem(STOREDTOKEN), localStorage.getItem(REFRESHTOKEN));
+      let outgoingDTO: any = new TokensDTO(localStorage.getItem(STOREDTOKEN), localStorage.getItem(REFRESHTOKEN));
       this.RefreshToken(outgoingDTO);
     }
     else if (localStorage.getItem(SESSIONTOKEN)) {
@@ -88,8 +88,8 @@ export class EntryService {
     }
   }
 
-  RefreshToken(outgoingDTO: RefreshTokenDTO) {
-    return this.http.post<RefreshTokenDTO>(`${this.glossary.RefreshSession()}`, RefreshTokenDTO)
+  RefreshToken(outgoingDTO: TokensDTO) {
+    return this.http.post<TokensDTO>(`${this.glossary.RefreshSession()}`, TokensDTO)
     .pipe(map((res: any) => {
         localStorage.setItem(STOREDTOKEN, res.jwToken);
         localStorage.setItem(SESSIONTOKEN, res.jwToken);
